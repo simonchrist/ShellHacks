@@ -1,8 +1,7 @@
-import datetime
+import datetime as datetime
 import plotly.offline as py
 import plotly.graph_objs as go
 import pandas_datareader as web
-import matplotlib.pyplot as plt
 
 start = datetime.datetime(2014, 1, 1)
 end = datetime.datetime(2025, 1, 1)
@@ -64,30 +63,30 @@ layout = {
 }
 
 data2 = [trace2]
-layout = {
+layout2 = {
     'title': 'ETH - ETHEREUM',
     'xaxis': {'title': 'Timeframe'},
     'yaxis': {'title': 'Price'}
 }
 
 data3 = [trace3]
-layout = {
+layout3 = {
     'title': 'DOGE - DOGECOIN',
     'xaxis': {'title': 'Timeframe'},
     'yaxis': {'title': 'Price'}
 }
 
 data4 = [trace4]
-layout = {
+layout4 = {
     'title': 'USDT - TETHER',
     'xaxis': {'title': 'Timeframe'},
     'yaxis': {'title': 'Price'}
 }
 
 fig = dict(data=data, layout=layout)
-fig2 = dict(data=data2, layout=layout)
-fig3 = dict(data=data3, layout=layout)
-fig4 = dict(data=data4, layout=layout)
+fig2 = dict(data=data2, layout=layout2)
+fig3 = dict(data=data3, layout=layout3)
+fig4 = dict(data=data4, layout=layout4)
 
 py.plot(fig, filename='crypto.html')
 py.plot(fig2, filename='crypto1.html')
